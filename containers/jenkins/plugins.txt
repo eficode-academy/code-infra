@@ -15,3 +15,5 @@ groovy
 plot
 parameterized-trigger
 build-pipeline-plugin
+dashboard-view
+jquery
