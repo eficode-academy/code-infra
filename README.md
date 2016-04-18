@@ -46,6 +46,7 @@ Create the data filesystems for the servers:
     echo "Changing ownership of /opt/containers to 1000:50 recursively"
     chown 1000:50 /opt/containers -R
     echo "Done."
+
     docker@code:~$ chmod u+x make_data.sh
     docker@code:~$ sudo ./make_data.sh
     docker@code:~$ exit
@@ -54,4 +55,4 @@ Create the data filesystems for the servers:
 # Set up jenkins build environment
 
     $ cd containers
-    $ docker-compose -up
+    $ docker-compose up
