@@ -1,4 +1,4 @@
-# dayofdocker15
+# Continuous Delivery Infrastructure
 
 You need docker and docker-compose to run this setup.
 
