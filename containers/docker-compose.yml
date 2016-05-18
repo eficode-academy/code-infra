@@ -21,7 +21,7 @@ jenkins:
    - "50000:50000"
   volumes:
    - /etc/localtime:/etc/localtime
-   - /opt/containers/jenkins_home:/var/jenkins_home
+   - /var/jenkins_home
    - /var/run/docker.sock:/var/run/docker.sock
    - /usr/lib/x86_64-linux-gnu/libapparmor.so.1.1.0:/lib/x86_64-linux-gnu/libapparmor.so.1
   command: --prefix=/jenkins
@@ -29,14 +29,14 @@ jenkins:
     - registry
     - artifactory
 artifactory:
-  image: mattgruter/artifactory
+  image: mattgruter/artifactory:3.9.2
   hostname: artifactory
   ## build: artifactory/
   volumes:
    - /etc/localtime:/etc/localtime
-   - /opt/containers/artifactory/data:/artifactory/data
-   - /opt/containers/artifactory/logs:/artifactory/logs
-   - /opt/containers/artifactory/backup:/artifactory/backup
+   - /artifactory/data
+   - /artifactory/logs
+   - /artifactory/backup
   environment:
    - JAVA_OPTS='-Djsse.enableSNIExtension=false'
 registry:
@@ -54,4 +54,4 @@ registry:
    # Registry 1 uses /tmp/registry for storage. We are now using registry:2
    # - /opt/containers/registry:/tmp/registry
    # Registry:2 uses /var/lib/registry for storage
-   - /opt/containers/registry:/var/lib/registry
+   - /var/lib/registry
