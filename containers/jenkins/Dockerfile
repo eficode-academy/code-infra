@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins:1.651.3
 
 # There was no need for a custom image when jenkins official image was sufficient.
 USER root
