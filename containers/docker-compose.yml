@@ -35,7 +35,7 @@ services:
       - /artifactory/data
       - /artifactory/logs
       - /artifactory/backup
-   environment:
+    environment:
       - JAVA_OPTS='-Djsse.enableSNIExtension=false'
 
   registry:
