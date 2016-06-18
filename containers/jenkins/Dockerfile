@@ -20,6 +20,10 @@ USER jenkins
 COPY plugins.txt /usr/share/jenkins/ref/
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 
+# Copy configuration scripts that will be executed by groovy on startup
+COPY *.groovy /usr/share/jenkins/ref/init.groovy.d/
+
+# Install Docker
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.11.0
 ENV DOCKER_SHA256 87331b3b75d32d3de5d507db9a19a24dd30ff9b2eb6a5a9bdfaba954da15e16b
