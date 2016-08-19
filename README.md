@@ -52,7 +52,7 @@ Create the data filesystems for the servers:
     docker@code:~$ exit
 
 
-# Set up jenkins build environment
+# Set up jenkins build environment inside code-infra
 
     $ cd containers
     $ docker-compose -up
