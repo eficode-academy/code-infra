@@ -21,19 +21,12 @@ This is the test project, which will be compiled by the students through jenkins
 
 Fork this git repository for the go web server:
 
-    git clone https://github.com/praqma-training/code-infra
-
-Create a vitual machine for running the CI system:
-
-    docker-machine create code --driver virtualbox
-    eval $(docker-machine env code)
-
-
 
 Create the data filesystems for the servers:
 
-    docker-machine ssh code
-    docker@code:~$ cat > make_data.sh
+    git clone https://github.com/praqma-training/code-infra
+    cd code-infra
+    cat > make_data.sh
     echo "You should not be running any containers in /opt/containers when you run this script."
     echo "Removing old directory structure from /opt/containers"
     rm /opt/containers/* -fr
