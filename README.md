@@ -48,4 +48,4 @@ Create the data filesystems for the servers:
 # Set up jenkins build environment
 
     $ cd containers
-    $ docker-compose -up
+    $ docker-compose up
