@@ -10,5 +10,5 @@ mkdir -p /opt/containers/artifactory/logs
 mkdir -p /opt/containers/artifactory/backup
 mkdir -p /opt/containers/registry
 echo "Changing ownership of /opt/containers to 1000:1000 recursively"
-chown 1000:1000 /opt/containers -R
+chown 1000:50 /opt/containers -R
 echo "Done."
