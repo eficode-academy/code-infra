@@ -25,27 +25,10 @@ Fork this git repository for the go web server:
 Create the data filesystems for the servers:
 
     git clone https://github.com/praqma-training/code-infra
-    cd code-infra
-    cat > make_data.sh
-    echo "You should not be running any containers in /opt/containers when you run this script."
-    echo "Removing old directory structure from /opt/containers"
-    rm /opt/containers/* -fr
-    echo "Re-creating directory structure inside /opt/containers"
-    mkdir -p /opt/containers/jenkins_home
-    mkdir -p /opt/containers/artifactory/data
-    mkdir -p /opt/containers/artifactory/logs
-    mkdir -p /opt/containers/artifactory/backup
-    mkdir -p /opt/containers/registry
-    echo "Changing ownership of /opt/containers to 1000:50 recursively"
-    chown 1000:50 /opt/containers -R
-    echo "Done."
-
-    docker@code:~$ chmod u+x make_data.sh
-    docker@code:~$ sudo ./make_data.sh
-    docker@code:~$ exit
+    cd code-infra/containers
+    sudo ./create-homes.sh
 
 
-# Set up jenkins build environment
+# Bring up the containers (apache, jenkins, registry, artifactory
 
-    $ cd containers
-    $ docker-compose up
+    $ docker-compose up -d
