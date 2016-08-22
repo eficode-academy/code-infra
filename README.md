@@ -2,9 +2,9 @@
 
 You need docker and docker-compose to run this setup.
 
-Jenkins runs at http://YOUR-DOCKER-HOST:8080/jenkins
-Artifactory runs at http://YOUR-DOCKER-HOST:8090/artifactory
-Registry run at http://http://YOUR-DOCKER-HOST:5000
+  * Jenkins runs at http://YOUR-DOCKER-HOST:8081/jenkins
+  * Artifactory runs at http://YOUR-DOCKER-HOST:8090/artifactory
+  * Registry run at http://http://YOUR-DOCKER-HOST:5000
 
 The testing web server (written in Go) will be accessible at http://YOUR-DOCKER-HOST:8000 - when you compile it and run it.
 
@@ -18,8 +18,6 @@ There is a GoWebServer directory which contains http.go file. You can run it and
 This is the test project, which will be compiled by the students through jenkins.
 
 # setup
-
-Fork this git repository for the go web server:
 
 
 Create the data filesystems for the servers:
