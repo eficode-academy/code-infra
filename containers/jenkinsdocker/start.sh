@@ -23,4 +23,4 @@ docker build -t dockerjenkins:1 .
 
 echo "Starting Jenkins with Docker"
 
-docker run -d -p 85:8080 -p 50001:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /data/jenkins:/var/jenkins_home dockerjenkins:1
+docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v /data/jenkins:/var/jenkins_home dockerjenkins:1
