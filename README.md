@@ -27,6 +27,6 @@ Create the data filesystems for the servers:
     sudo ./create-homes.sh
 
 
-# Bring up the containers (apache, jenkins, registry, artifactory
+# Bring up the containers (apache, jenkins, registry, artifactory)
 
     $ docker-compose up -d
