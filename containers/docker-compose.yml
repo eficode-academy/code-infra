@@ -29,7 +29,6 @@ services:
   artifactory:
     image: mattgruter/artifactory:3.9.2
     hostname: artifactory
-    ## build: artifactory/
     volumes:
       - /etc/localtime:/etc/localtime
       - /artifactory/data
