@@ -13,7 +13,7 @@ RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 # The following passes the following parameter to the jenkins container.
 # This means we do not need to pass this to the run command.
-CMD ["--prefix=/jenkins"]
+CMD ["--prefix=/jenkins -Djenkins.install.runSetupWizard=false"]
 
 # Add plugins to Jenkins:
 USER jenkins
