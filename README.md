@@ -6,19 +6,10 @@ You need docker and docker-compose to run this setup.
   * Artifactory runs at http://YOUR-DOCKER-HOST:8090/artifactory
   * Registry run at http://http://YOUR-DOCKER-HOST:5000
 
-The testing web server (written in Go) will be accessible at http://YOUR-DOCKER-HOST:8000 - when you compile it and run it.
+The containers home directories (data directories) are in /opt/containers, except for jenkins which is mounted on /var/jenkins_home to be compatible with jenkins workspace paths.
+These directory trees need to be owned by uid 1000 and gid 50. They are setup to have this ownership when you run the create-homes.sh script.
 
-There is a centos-slave Docker container, which you may need to build yourself if you decide to modify it.
-
-The containers home directories (data directories) are in /opt/containers .
-The /opt/containers directory tree needs to be owned by uid 1000 and gid 50. They are setup to have this ownership.
-If you want to do something manually to these directories, you need to use sudo.
-
-There is a GoWebServer directory which contains http.go file. You can run it and it will open a port 8000 and listen on it.
-This is the test project, which will be compiled by the students through jenkins.
-
-# setup
-
+# Setup
 
 Create the data filesystems for the servers:
 
@@ -27,6 +18,6 @@ Create the data filesystems for the servers:
     sudo ./create-homes.sh
 
 
-# Bring up the containers (apache, jenkins, registry, artifactory)
+# Run the system (apache, jenkins, registry, artifactory)
 
     $ docker-compose up -d
